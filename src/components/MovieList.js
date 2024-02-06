@@ -1,10 +1,13 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 
 import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 
+
+
 const MovieList = (props)=> {
-    const movies = [];
+    const movies = useSelector( ( state ) => state.list )
 
     return (
         <div className="col">
